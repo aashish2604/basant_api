@@ -22,7 +22,9 @@ async function getEvents(){
     try {
         let day1=[];
         let day2=[];
+        console.log("start");
         const snapshot=await db.collection('events').get();
+        console.log(snapshot.size);
         snapshot.forEach(element => {
             if(element.data().day==='1') day1.push(element.data());
             else day2.push(element.data());
@@ -33,7 +35,7 @@ async function getEvents(){
             "day2": day2
         };
     } catch (error) {
-        console.log(error);
+        console.log("some error occured");
         throw error;
     }
 }
