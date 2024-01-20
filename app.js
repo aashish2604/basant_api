@@ -22,5 +22,9 @@ app.get('/sponsors',(req,res)=>{
     firebase.getSponsors().then((str)=>{
         res.send(str);
     })
+});
+
+app.get('/',(req,res)=>{
+    res.send("server is healthy");
 })
 

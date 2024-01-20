@@ -31,6 +31,7 @@ async function getEvents(){
             "day2": day2
         };
     } catch (error) {
+        console.log(error);
         throw error;
     }
 }
@@ -48,6 +49,7 @@ async function getSponsors(){
         return sponsors;
         else return "empty";
     } catch (error) {
+        console.log(error);
         throw error;
     }
 }
