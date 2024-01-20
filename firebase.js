@@ -26,6 +26,7 @@ async function getEvents(){
             if(element.data().day==='1') day1.push(element.data());
             else day2.push(element.data());
         });
+        console.log(day1);
         return {
             "day1": day1,
             "day2": day2
@@ -45,6 +46,7 @@ async function getSponsors(){
             if(e.id==="waiting") isPrepared=0;
             sponsors.push(e.data());
         });
+        console.log(sponsors);
         if(isPrepared===1)
         return sponsors;
         else return "empty";
