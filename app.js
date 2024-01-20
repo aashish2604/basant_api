@@ -4,11 +4,11 @@ const firebase=require('./firebase');
 
 const app=express();
 
-let port = process.env.PORT || "0.0.0.0";
+let port = process.env.PORT || 5000;
 
 app.use(express.urlencoded({extended:true}));
 
-app.listen(4000, port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server started listening at ${port}.`);
 });
 
