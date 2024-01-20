@@ -13,14 +13,16 @@ app.listen(port, "0.0.0.0", () => {
 });
 
 app.get('/events',(req,res) => {
+    console.log("hitting request");
     firebase.getEvents().then((str)=>{
+        console.log("done");
         res.send("success");
     })
 });
 
 app.get('/sponsors',(req,res)=>{  
     firebase.getSponsors().then((str)=>{
-        res.send("success");
+        res.send(str);
     })
 });
 
